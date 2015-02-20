@@ -1,0 +1,42 @@
+{
+    "version": 1,
+    "collections": [
+        {
+            "id": "1c65d329-f96d-34ed-d075-9ed5b6dfb984",
+            "name": "itunes search",
+            "timestamp": 1424475078551,
+            "requests": [
+                {
+                    "collectionId": "1c65d329-f96d-34ed-d075-9ed5b6dfb984",
+                    "id": "310efc72-b27a-51df-58ec-d3ee3cba2e3a",
+                    "name": "GET lookup by id",
+                    "description": "GET request to lookup API with id",
+                    "url": "https://itunes.apple.com/lookup?id=909253",
+                    "method": "GET",
+                    "headers": "Content-Type: application/json\nAccept: application/json\n",
+                    "data": "",
+                    "dataMode": "raw",
+                    "timestamp": 0,
+                    "responses": [],
+                    "version": 2
+                },
+                {
+                    "collectionId": "1c65d329-f96d-34ed-d075-9ed5b6dfb984",
+                    "id": "c9a1b5e5-fdde-fb6e-631b-3cc65c58ce88",
+                    "name": "GET search term",
+                    "description": "GET request to search API using multiple parameters",
+                    "url": "https://itunes.apple.com/search?term=yelp&country=us&entity=software",
+                    "method": "GET",
+                    "headers": "",
+                    "data": "",
+                    "dataMode": "params",
+                    "timestamp": 0,
+                    "responses": []
+                }
+            ]
+        }
+    ],
+    "environments": [],
+    "headerPresets": [],
+    "globals": []
+}

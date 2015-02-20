@@ -7,9 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "JMPostmanCollection.h"
 
 @interface ViewController ()
-
+@property (strong, nonatomic) JMPostmanCollection *collection;
 @end
 
 @implementation ViewController
@@ -17,11 +18,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.collection = [JMPostmanCollection collectionFromBundle];
+    [self.tableView registerNib:[UINib nibWithNibName:@"JMRequestTableViewCell" bundle:nil]
+         forCellReuseIdentifier:@"JMRequestTableViewCell"];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - UITableViewDatasource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [self.tableView dequeueReusableCellWithIdentifier:@"JMRequestTableViewCell"];
 }
 
 @end

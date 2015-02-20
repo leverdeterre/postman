@@ -14,6 +14,10 @@
 		C24359541A97F7BA004E3B65 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C24359531A97F7BA004E3B65 /* Images.xcassets */; };
 		C24359571A97F7BA004E3B65 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C24359551A97F7BA004E3B65 /* LaunchScreen.xib */; };
 		C24359631A97F7BA004E3B65 /* PostmanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C24359621A97F7BA004E3B65 /* PostmanTests.m */; };
+		C24359701A97F875004E3B65 /* JMRequestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C243596E1A97F875004E3B65 /* JMRequestTableViewCell.m */; };
+		C24359711A97F875004E3B65 /* JMRequestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C243596F1A97F875004E3B65 /* JMRequestTableViewCell.xib */; };
+		C24359761A97FD63004E3B65 /* postman_backup.json in Resources */ = {isa = PBXBuildFile; fileRef = C24359751A97FD63004E3B65 /* postman_backup.json */; };
+		C24359791A97FD7C004E3B65 /* JMPostmanCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = C24359781A97FD7C004E3B65 /* JMPostmanCollection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,12 @@
 		C243595C1A97F7BA004E3B65 /* PostmanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostmanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C24359611A97F7BA004E3B65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C24359621A97F7BA004E3B65 /* PostmanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostmanTests.m; sourceTree = "<group>"; };
+		C243596D1A97F875004E3B65 /* JMRequestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMRequestTableViewCell.h; sourceTree = "<group>"; };
+		C243596E1A97F875004E3B65 /* JMRequestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMRequestTableViewCell.m; sourceTree = "<group>"; };
+		C243596F1A97F875004E3B65 /* JMRequestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JMRequestTableViewCell.xib; sourceTree = "<group>"; };
+		C24359751A97FD63004E3B65 /* postman_backup.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = postman_backup.json; sourceTree = "<group>"; };
+		C24359771A97FD7C004E3B65 /* JMPostmanCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMPostmanCollection.h; sourceTree = "<group>"; };
+		C24359781A97FD7C004E3B65 /* JMPostmanCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMPostmanCollection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +93,9 @@
 			children = (
 				C243594A1A97F7BA004E3B65 /* AppDelegate.h */,
 				C243594B1A97F7BA004E3B65 /* AppDelegate.m */,
+				C24359741A97FD25004E3B65 /* Model */,
+				C24359721A97F90A004E3B65 /* Helper */,
+				C243596C1A97F839004E3B65 /* Cells */,
 				C243594D1A97F7BA004E3B65 /* ViewController.h */,
 				C243594E1A97F7BA004E3B65 /* ViewController.m */,
 				C24359501A97F7BA004E3B65 /* Main.storyboard */,
@@ -96,6 +109,7 @@
 		C24359461A97F7BA004E3B65 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C24359751A97FD63004E3B65 /* postman_backup.json */,
 				C24359471A97F7BA004E3B65 /* Info.plist */,
 				C24359481A97F7BA004E3B65 /* main.m */,
 			);
@@ -117,6 +131,32 @@
 				C24359611A97F7BA004E3B65 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C243596C1A97F839004E3B65 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C243596D1A97F875004E3B65 /* JMRequestTableViewCell.h */,
+				C243596E1A97F875004E3B65 /* JMRequestTableViewCell.m */,
+				C243596F1A97F875004E3B65 /* JMRequestTableViewCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		C24359721A97F90A004E3B65 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		C24359741A97FD25004E3B65 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C24359771A97FD7C004E3B65 /* JMPostmanCollection.h */,
+				C24359781A97FD7C004E3B65 /* JMPostmanCollection.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +241,8 @@
 			files = (
 				C24359521A97F7BA004E3B65 /* Main.storyboard in Resources */,
 				C24359571A97F7BA004E3B65 /* LaunchScreen.xib in Resources */,
+				C24359761A97FD63004E3B65 /* postman_backup.json in Resources */,
+				C24359711A97F875004E3B65 /* JMRequestTableViewCell.xib in Resources */,
 				C24359541A97F7BA004E3B65 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,7 +262,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C243594F1A97F7BA004E3B65 /* ViewController.m in Sources */,
+				C24359791A97FD7C004E3B65 /* JMPostmanCollection.m in Sources */,
 				C243594C1A97F7BA004E3B65 /* AppDelegate.m in Sources */,
+				C24359701A97F875004E3B65 /* JMRequestTableViewCell.m in Sources */,
 				C24359491A97F7BA004E3B65 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

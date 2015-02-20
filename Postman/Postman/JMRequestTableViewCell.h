@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  JMRequestTableViewCell.h
 //  Postman
 //
 //  Created by jerome morissard on 21/02/2015.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UITableViewController
-
+@interface JMRequestTableViewCell : UITableViewCell
 
 @end
-
