@@ -21,11 +21,6 @@
 
 @implementation JMResponseResultViewerViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-}
-
 - (void)setOperation:(AFHTTPRequestOperation *)operation responseObject:(id)obj error:(NSError *)error timeIntervale:(CFTimeInterval)interval
 {
     self.operation = operation;
@@ -39,7 +34,6 @@
     [super viewWillAppear:animated];
     [self.webView loadHTMLString:[self htmlString]  baseURL:nil];
 }
-
 
 #pragma mark - Compose helper
 
@@ -63,12 +57,23 @@
     [html appendString:@"<TABLE>"];
     [html appendString:@"<TR>"];
         [html appendString:@"<TD>"];
-        [html appendString:@"<strong>Headers</strong>"];
+        [html appendString:@"<strong>Request Headers</strong>"];
         [html appendString:@"</TD>"];
         [html appendString:@"<TD>"];
         [html appendFormat:@"%@",self.operation.request.allHTTPHeaderFields.description];
         [html appendString:@"</TD>"];
     [html appendString:@"</TR>"];
+    
+    if (self.operation.response) {
+        [html appendString:@"<TR>"];
+        [html appendString:@"<TD>"];
+        [html appendString:@"<strong>Response Headers</strong>"];
+        [html appendString:@"</TD>"];
+        [html appendString:@"<TD>"];
+        [html appendFormat:@"%@",self.operation.response.allHeaderFields.description];
+        [html appendString:@"</TD>"];
+        [html appendString:@"</TR>"];
+    }
 
     [html appendString:@"<TR>"];
         [html appendString:@"<TD>"];
