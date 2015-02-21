@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		533D1779D4EA111DEE1D5A75 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F372BBA1F7B7069216C56799 /* libPods.a */; };
+		C23CF34D1A992A98007A67A8 /* postman.png in Resources */ = {isa = PBXBuildFile; fileRef = C23CF34C1A992A98007A67A8 /* postman.png */; };
+		C23CF34F1A992AF8007A67A8 /* postman64.png in Resources */ = {isa = PBXBuildFile; fileRef = C23CF34E1A992AF8007A67A8 /* postman64.png */; };
 		C24359491A97F7BA004E3B65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C24359481A97F7BA004E3B65 /* main.m */; };
 		C243594C1A97F7BA004E3B65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C243594B1A97F7BA004E3B65 /* AppDelegate.m */; };
 		C243594F1A97F7BA004E3B65 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C243594E1A97F7BA004E3B65 /* ViewController.m */; };
@@ -38,6 +40,8 @@
 /* Begin PBXFileReference section */
 		3E05CD7718A1FC3F5C44B374 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6290324DA2BCA7FB740568CF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C23CF34C1A992A98007A67A8 /* postman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = postman.png; sourceTree = "<group>"; };
+		C23CF34E1A992AF8007A67A8 /* postman64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = postman64.png; sourceTree = "<group>"; };
 		C24359431A97F7BA004E3B65 /* Postman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Postman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C24359471A97F7BA004E3B65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C24359481A97F7BA004E3B65 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -138,6 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				C24359751A97FD63004E3B65 /* postman_backup.json */,
+				C23CF34C1A992A98007A67A8 /* postman.png */,
+				C23CF34E1A992AF8007A67A8 /* postman64.png */,
 				C24359471A97F7BA004E3B65 /* Info.plist */,
 				C24359481A97F7BA004E3B65 /* main.m */,
 			);
@@ -292,8 +298,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C24359521A97F7BA004E3B65 /* Main.storyboard in Resources */,
+				C23CF34D1A992A98007A67A8 /* postman.png in Resources */,
 				C24359841A986D97004E3B65 /* JMResponseResultViewerViewController.xib in Resources */,
 				C24359571A97F7BA004E3B65 /* LaunchScreen.xib in Resources */,
+				C23CF34F1A992AF8007A67A8 /* postman64.png in Resources */,
 				C24359761A97FD63004E3B65 /* postman_backup.json in Resources */,
 				C24359711A97F875004E3B65 /* JMRequestTableViewCell.xib in Resources */,
 				C24359541A97F7BA004E3B65 /* Images.xcassets in Resources */,
