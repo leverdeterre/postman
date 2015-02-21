@@ -60,7 +60,7 @@
         [html appendString:@"<strong>Request Headers</strong>"];
         [html appendString:@"</TD>"];
         [html appendString:@"<TD>"];
-        [html appendFormat:@"%@",self.operation.request.allHTTPHeaderFields.description];
+        [html appendFormat:@"%@",[self htmlStringForDictionary:self.operation.request.allHTTPHeaderFields]];
         [html appendString:@"</TD>"];
     [html appendString:@"</TR>"];
     
@@ -70,7 +70,7 @@
         [html appendString:@"<strong>Response Headers</strong>"];
         [html appendString:@"</TD>"];
         [html appendString:@"<TD>"];
-        [html appendFormat:@"%@",self.operation.response.allHeaderFields.description];
+        [html appendFormat:@"%@",[self htmlStringForDictionary:self.operation.response.allHeaderFields]];
         [html appendString:@"</TD>"];
         [html appendString:@"</TR>"];
     }
@@ -97,5 +97,17 @@
     }
     return html;
 }
+
+- (NSString *)htmlStringForDictionary:(NSDictionary *)dict
+{
+    NSMutableString *html = [[NSMutableString alloc] init];
+
+    for (NSString *key in dict.allKeys) {
+        [html appendFormat:@"<strong>%@</strong> : %@ <br/>",key, [dict objectForKey:key]];
+    }
+    
+    return html;
+}
+
 
 @end
