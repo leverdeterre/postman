@@ -10,6 +10,9 @@
 
 @interface JMPostmanCollection : NSObject
 
+@property (readonly ,strong, nonatomic) NSString *collectionName;
+@property (readonly ,strong, nonatomic) NSArray *collectionRequests;
+
 + (instancetype)collectionFromBundle;
 
 @end

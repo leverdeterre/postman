@@ -10,4 +10,7 @@
 
 @interface JMRequestTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *requestTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *requestDetailLabel;
+
 @end

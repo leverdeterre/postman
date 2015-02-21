@@ -18,6 +18,7 @@
 		C24359711A97F875004E3B65 /* JMRequestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C243596F1A97F875004E3B65 /* JMRequestTableViewCell.xib */; };
 		C24359761A97FD63004E3B65 /* postman_backup.json in Resources */ = {isa = PBXBuildFile; fileRef = C24359751A97FD63004E3B65 /* postman_backup.json */; };
 		C24359791A97FD7C004E3B65 /* JMPostmanCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = C24359781A97FD7C004E3B65 /* JMPostmanCollection.m */; };
+		C243597C1A97FF92004E3B65 /* JMPostmanRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C243597B1A97FF92004E3B65 /* JMPostmanRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		C24359751A97FD63004E3B65 /* postman_backup.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = postman_backup.json; sourceTree = "<group>"; };
 		C24359771A97FD7C004E3B65 /* JMPostmanCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMPostmanCollection.h; sourceTree = "<group>"; };
 		C24359781A97FD7C004E3B65 /* JMPostmanCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMPostmanCollection.m; sourceTree = "<group>"; };
+		C243597A1A97FF92004E3B65 /* JMPostmanRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMPostmanRequest.h; sourceTree = "<group>"; };
+		C243597B1A97FF92004E3B65 /* JMPostmanRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMPostmanRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +158,8 @@
 			children = (
 				C24359771A97FD7C004E3B65 /* JMPostmanCollection.h */,
 				C24359781A97FD7C004E3B65 /* JMPostmanCollection.m */,
+				C243597A1A97FF92004E3B65 /* JMPostmanRequest.h */,
+				C243597B1A97FF92004E3B65 /* JMPostmanRequest.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -262,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C243594F1A97F7BA004E3B65 /* ViewController.m in Sources */,
+				C243597C1A97FF92004E3B65 /* JMPostmanRequest.m in Sources */,
 				C24359791A97FD7C004E3B65 /* JMPostmanCollection.m in Sources */,
 				C243594C1A97F7BA004E3B65 /* AppDelegate.m in Sources */,
 				C24359701A97F875004E3B65 /* JMRequestTableViewCell.m in Sources */,

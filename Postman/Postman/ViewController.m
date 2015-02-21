@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "JMPostmanCollection.h"
+#import "JMRequestTableViewCell.h"
 
 @interface ViewController ()
 @property (strong, nonatomic) JMPostmanCollection *collection;
@@ -19,22 +20,25 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    [self.tableView setContentInset:UIEdgeInsetsMake(50,0,0,0)];
     self.collection = [JMPostmanCollection collectionFromBundle];
     [self.tableView registerNib:[UINib nibWithNibName:@"JMRequestTableViewCell" bundle:nil]
          forCellReuseIdentifier:@"JMRequestTableViewCell"];
-    
+    [self.tableView reloadData];
 }
 
 #pragma mark - UITableViewDatasource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return self.collection.collectionRequests.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [self.tableView dequeueReusableCellWithIdentifier:@"JMRequestTableViewCell"];
+    JMRequestTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"JMRequestTableViewCell"];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    return cell;
 }
 
 @end

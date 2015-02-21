@@ -7,6 +7,7 @@
 //
 
 #import "JMPostmanCollection.h"
+#import "JMPostmanRequest.h"
 
 @implementation JMPostmanCollection
 
@@ -15,8 +16,26 @@
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"postman_backup" ofType:@"json"];
     NSData *data = [NSData dataWithContentsOfFile:filePath];
     
-    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
-    return [self new];
+    JMPostmanCollection *collect = [JMPostmanCollection new];
+    [collect setupWithDictionary:[NSJSONSerialization JSONObjectWithData:data options:0 error:NULL]];
+    return collect;
+}
+
+- (void)setupWithDictionary:(NSDictionary *)dict
+{
+    NSMutableArray *arrayM = [NSMutableArray new];
+    for (NSDictionary *collectionDict in [dict objectForKey:@"collections"]) {
+        NSArray *requests = [collectionDict objectForKey:@"requests"];
+        
+        for (NSDictionary *reqDict in requests) {
+            JMPostmanRequest *req = [JMPostmanRequest postmanRequestFromDictionary:reqDict];
+            [arrayM addObject:req];
+        }
+    }
+
+    
+    _collectionName = [dict objectForKey:@"name"];
+    _collectionRequests = arrayM;
 }
 
 @end
