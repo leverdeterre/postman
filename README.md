@@ -15,4 +15,5 @@ Postman iOS app to manipulate Postman collections
 * add POST request with parameters (form-dat / x-www-form-urlencoded / raw (TEXT / JSON / XML / HTML) 
 * add custom headers support from POSTMAN collection.request
 * add basic Auth support
+* add file support (to be able to open application with a custom postman collection)
 
