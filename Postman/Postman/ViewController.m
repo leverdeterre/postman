@@ -37,6 +37,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     JMRequestTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"JMRequestTableViewCell"];
+    [cell setupWithPostmanRequest:self.collection.collectionRequests[indexPath.row]];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }

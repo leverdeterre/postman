@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class JMPostmanRequest;
 @interface JMRequestTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *requestTitleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *requestDetailLabel;
+- (void)setupWithPostmanRequest:(JMPostmanRequest *)postmanRequest;
 
 @end

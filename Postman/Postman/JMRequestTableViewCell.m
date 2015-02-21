@@ -7,8 +7,20 @@
 //
 
 #import "JMRequestTableViewCell.h"
+#import "JMPostmanRequest.h"
+
+@interface JMRequestTableViewCell ()
+@property (weak, nonatomic) IBOutlet UILabel *requestTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *requestDetailLabel;
+@end
 
 @implementation JMRequestTableViewCell
+
+- (void)setupWithPostmanRequest:(JMPostmanRequest *)postmanRequest
+{
+    _requestTitleLabel.text = postmanRequest.name;
+    _requestDetailLabel.text = postmanRequest.requestDescription;
+}
 
 - (void)awakeFromNib {
     // Initialization code
