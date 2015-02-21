@@ -31,7 +31,19 @@
 {
     AFHTTPRequestOperation *operation;
     if ([request.method isEqualToString:@"GET"]) {
+        if (request.data) {
+            NSLog(@"request.data not actually supported in GET request");
+        }
+            
         operation = [[JMRequestFactory sharedInstance].manager GET:request.url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            NSLog(@"Request sucess");
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"Request failed");
+        }];
+        
+    } else if ([request.method isEqualToString:@"POST"]) {
+        
+        operation = [[JMRequestFactory sharedInstance].manager POST:request.url parameters:request.data success:^(AFHTTPRequestOperation *operation, id responseObject) {
             NSLog(@"Request sucess");
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"Request failed");

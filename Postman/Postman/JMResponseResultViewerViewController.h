@@ -11,6 +11,6 @@
 @class AFHTTPRequestOperation;
 @interface JMResponseResultViewerViewController : UIViewController
 
-- (void)setOperation:(AFHTTPRequestOperation *)operation responseObject:(id)obj error:(NSError *)error;
+- (void)setOperation:(AFHTTPRequestOperation *)operation responseObject:(id)obj error:(NSError *)error timeIntervale:(CFTimeInterval)interval;
 
 @end

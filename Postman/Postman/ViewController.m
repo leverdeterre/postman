@@ -21,6 +21,9 @@
 @interface ViewController ()
 @property (strong, nonatomic) JMPostmanCollection *collection;
 @property (strong, nonatomic) AFHTTPRequestOperation *currentOperation;
+
+//Measuring request speed
+@property (nonatomic) CFAbsoluteTime requestStartTime;
 @end
 
 @implementation ViewController
@@ -59,16 +62,23 @@
         [_currentOperation cancel];
     }
     
+    
+    self.requestStartTime = CFAbsoluteTimeGetCurrent();
+    
     __weak ViewController *weakSelf = self;
     _currentOperation = [JMRequestFactory operationFromPostmanRequest:r];
     [_currentOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        CFTimeInterval requestEndTime = CFAbsoluteTimeGetCurrent();
         JMResponseResultViewerViewController *vc = [JMResponseResultViewerViewController new];
-        [vc setOperation:operation responseObject:responseObject error:nil];
+        [vc setOperation:operation responseObject:responseObject error:nil timeIntervale:requestEndTime - weakSelf.requestStartTime];
         [weakSelf.navigationController pushViewController:vc animated:YES];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        CFTimeInterval requestEndTime = CFAbsoluteTimeGetCurrent();
         JMResponseResultViewerViewController *vc = [JMResponseResultViewerViewController new];
-        [vc setOperation:operation responseObject:nil error:error];
+        [vc setOperation:operation responseObject:nil error:error timeIntervale:requestEndTime - weakSelf.requestStartTime];
         [weakSelf.navigationController pushViewController:vc animated:YES];
     }];
 }

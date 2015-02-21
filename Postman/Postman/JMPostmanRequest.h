@@ -15,6 +15,7 @@
 @property (readonly,strong, nonatomic) NSString *method;
 @property (readonly,strong, nonatomic) NSString *name;
 @property (readonly,strong, nonatomic) NSString *url;
+@property (readonly,strong, nonatomic) NSString *data;
 
 + (instancetype)postmanRequestFromDictionary:(NSDictionary *)dict;
 

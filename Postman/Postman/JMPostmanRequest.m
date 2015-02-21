@@ -25,6 +25,7 @@
         _method = [dict objectForKey:@"method"];
         _name = [dict objectForKey:@"name"];
         _url = [dict objectForKey:@"url"];
+        _data = [dict objectForKey:@"data"];
     }
     return self;
 }
