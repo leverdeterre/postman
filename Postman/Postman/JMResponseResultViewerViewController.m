@@ -37,12 +37,60 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    if (self.operation.error) {
-        [self.webView loadHTMLString:[self.operation.error description]  baseURL:nil];
+    [self.webView loadHTMLString:[self htmlString]  baseURL:nil];
+}
 
+
+#pragma mark - Compose helper
+
+- (NSString *)htmlString
+{
+    NSMutableString *html = [[NSMutableString alloc] init];
+    [html appendString:@"<HTML>"];
+    [html appendString:@"<HEAD>"];
+    [html appendString:@"<style>table {border-collapse: collapse;}  table, th, td { border: 1px solid black;}</style>"];
+    [html appendString:@"</HEAD>"];
+    [html appendString:@"<BODY>"];
+    [html appendFormat:@"%@",[self htmtInsideBodyString]];
+    [html appendString:@"</BODY>"];
+    [html appendString:@"</HTML>"];
+    return html;
+}
+
+- (NSString *)htmtInsideBodyString
+{
+    NSMutableString *html = [[NSMutableString alloc] init];
+    [html appendString:@"<TABLE>"];
+    [html appendString:@"<TR>"];
+        [html appendString:@"<TD>"];
+        [html appendString:@"<strong>Headers</strong>"];
+        [html appendString:@"</TD>"];
+        [html appendString:@"<TD>"];
+        [html appendFormat:@"%@",self.operation.request.allHTTPHeaderFields.description];
+        [html appendString:@"</TD>"];
+    [html appendString:@"</TR>"];
+
+    [html appendString:@"<TR>"];
+        [html appendString:@"<TD>"];
+        [html appendString:@"<strong>Duration</strong>"];
+        [html appendString:@"</TD>"];
+        [html appendString:@"<TD>"];
+        [html appendFormat:@"%lf second(s)",self.timeinterval];
+        [html appendString:@"</TD>"];
+    [html appendString:@"</TR>"];
+    
+    [html appendString:@"</TABLE>"];
+    
+    [html appendString:@"<BR/>"];
+    [html appendString:@"<BR/>"];
+    [html appendString:@"<strong>Response</strong>"];
+    if (self.operation.error) {
+        [html appendFormat:@"%@",[self.operation.error description]];
+        
     } else {
-        [self.webView loadHTMLString:[self.responseObject description]  baseURL:nil];
+        [html appendFormat:@"%@",[self.responseObject description]];
     }
+    return html;
 }
 
 @end
