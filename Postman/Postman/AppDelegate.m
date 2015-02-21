@@ -17,6 +17,27 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    NSLog(@"%@",launchOptions);
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    NSLog(@"%@",url);
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    NSLog(@"URL:%@", [url absoluteString]);
+    NSLog(@"sourceApplication:%@",sourceApplication);
+
+    if (url != nil && [url isFileURL]) {
+        if ([[url pathExtension].lowercaseString isEqualToString:@"postman"]) {
+            NSLog(@"URL:%@", [url absoluteString]);
+        }
+    }
+    
     return YES;
 }
 
