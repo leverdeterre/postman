@@ -27,4 +27,4 @@ Postman iOS app to manipulate Postman collections
 * [ ] add a method to increase data persitance (actually, just the last imported collection is persist)
 
 #Screenshots 
-| ![Image](./images/master_view.png) | ![Image](./images/details_view.png) |
+ ![Image](./images/master_view.png)  ![Image](./images/details_view.png) 
