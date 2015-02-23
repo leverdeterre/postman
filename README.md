@@ -19,8 +19,10 @@ Postman iOS app to manipulate Postman collections
 
 #Next ?
 * [ ] add more POST request to collection
-* [ ] add POST request with parameters (form-dat / x-www-form-urlencoded / raw (TEXT / JSON / XML / HTML) 
+* [ ] add POST request with parameters (form-dat / x-www-form-urlencoded / raw (TEXT / JSON / XML / HTML)
+* [ ] add a way to edit request
 * [ ] add custom headers support from POSTMAN collection.request
 * [ ] add basic Auth support
 * [x] add file support (to be able to open application with a custom postman collection)
+* [ ] add a method to increase data persitance (actually, just the last imported collection is persist)
 
