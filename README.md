@@ -10,6 +10,13 @@ Postman iOS app to manipulate Postman collections
 * respect gitflow, 
 * make your pull request on feature branches 
 
+#How to export collections ?
+![Image](./images/how-to-export-collection.png)
+
+#How to import collections in app?
+- Just drag and drop in your app. (simulator),
+- by email ? "Open In" will be an option for that file. 
+
 #Next ?
 * [ ] add more POST request to collection
 * [ ] add POST request with parameters (form-dat / x-www-form-urlencoded / raw (TEXT / JSON / XML / HTML) 
