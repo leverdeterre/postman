@@ -11,6 +11,19 @@
 
 @implementation JMPostmanCollection
 
++ (instancetype)collectionForLastInboxFile
+{
+    NSData *data = [[NSUserDefaults standardUserDefaults] objectForKey:@"inboxData"];
+    if (nil == data) {
+        return nil;
+    }
+    
+    JMPostmanCollection *collect = [JMPostmanCollection new];
+    [collect setupWithDictionary:[NSJSONSerialization JSONObjectWithData:data options:0 error:NULL]];
+    return collect;
+    return nil;
+}
+
 + (instancetype)collectionFromBundle
 {
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"postman_backup" ofType:@"json"];
@@ -24,14 +37,14 @@
 - (void)setupWithDictionary:(NSDictionary *)dict
 {
     NSMutableArray *arrayM = [NSMutableArray new];
-    for (NSDictionary *collectionDict in [dict objectForKey:@"collections"]) {
-        NSArray *requests = [collectionDict objectForKey:@"requests"];
+    //for (NSDictionary *collectionDict in [dict objectForKey:@"collections"]) {
+        NSArray *requests = [dict objectForKey:@"requests"];
         
         for (NSDictionary *reqDict in requests) {
             JMPostmanRequest *req = [JMPostmanRequest postmanRequestFromDictionary:reqDict];
             [arrayM addObject:req];
         }
-    }
+    //}
 
     
     _collectionName = [dict objectForKey:@"name"];

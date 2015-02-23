@@ -124,15 +124,10 @@
 			children = (
 				C243594A1A97F7BA004E3B65 /* AppDelegate.h */,
 				C243594B1A97F7BA004E3B65 /* AppDelegate.m */,
+				C27CED161A9AFFB600DC2447 /* UI */,
 				C24359741A97FD25004E3B65 /* Model */,
 				C24359721A97F90A004E3B65 /* Helper */,
-				C243596C1A97F839004E3B65 /* Cells */,
-				C243594D1A97F7BA004E3B65 /* ViewController.h */,
-				C243594E1A97F7BA004E3B65 /* ViewController.m */,
-				C24359851A986DC8004E3B65 /* ResultViewController */,
-				C24359501A97F7BA004E3B65 /* Main.storyboard */,
 				C24359531A97F7BA004E3B65 /* Images.xcassets */,
-				C24359551A97F7BA004E3B65 /* LaunchScreen.xib */,
 				C24359461A97F7BA004E3B65 /* Supporting Files */,
 			);
 			path = Postman;
@@ -205,6 +200,27 @@
 				C24359821A986D97004E3B65 /* JMResponseResultViewerViewController.xib */,
 			);
 			name = ResultViewController;
+			sourceTree = "<group>";
+		};
+		C27CED161A9AFFB600DC2447 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C27CED171A9AFFC500DC2447 /* Home */,
+				C24359851A986DC8004E3B65 /* ResultViewController */,
+				C24359501A97F7BA004E3B65 /* Main.storyboard */,
+				C24359551A97F7BA004E3B65 /* LaunchScreen.xib */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		C27CED171A9AFFC500DC2447 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C243596C1A97F839004E3B65 /* Cells */,
+				C243594D1A97F7BA004E3B65 /* ViewController.h */,
+				C243594E1A97F7BA004E3B65 /* ViewController.m */,
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 		C988723940C6B050CA1B3986 /* Frameworks */ = {

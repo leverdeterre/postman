@@ -14,5 +14,6 @@
 @property (readonly ,strong, nonatomic) NSArray *collectionRequests;
 
 + (instancetype)collectionFromBundle;
++ (instancetype)collectionForLastInboxFile;
 
 @end

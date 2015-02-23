@@ -35,6 +35,10 @@
     if (url != nil && [url isFileURL]) {
         if ([[url pathExtension].lowercaseString isEqualToString:@"postman"]) {
             NSLog(@"URL:%@", [url absoluteString]);
+            
+            NSData *data = [NSData dataWithContentsOfURL:url];
+            [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"inboxData"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
         }
     }
     

@@ -32,7 +32,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.collection = [JMPostmanCollection collectionFromBundle];
+    self.collection = [JMPostmanCollection collectionForLastInboxFile];
+    if (nil == self.collection) {
+        self.collection = [JMPostmanCollection collectionFromBundle];
+    }
     [self.tableView registerNib:[UINib nibWithNibName:@"JMRequestTableViewCell" bundle:nil]
          forCellReuseIdentifier:@"JMRequestTableViewCell"];
     [self.tableView reloadData];
