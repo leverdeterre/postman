@@ -25,6 +25,8 @@ Postman iOS app to manipulate Postman collections
 * [ ] add basic Auth support
 * [x] add file support (to be able to open application with a custom postman collection)
 * [ ] add a method to increase data persitance (actually, just the last imported collection is persist)
+* [ ] add a way perform multiple serial requests
+
 
 #Screenshots 
  ![Image](./images/master_details_views.png) 
