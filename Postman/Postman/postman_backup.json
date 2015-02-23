@@ -1,42 +1,35 @@
 {
-    "version": 1,
-    "collections": [
-        {
-            "id": "1c65d329-f96d-34ed-d075-9ed5b6dfb984",
-            "name": "itunes search",
-            "timestamp": 1424475078551,
-            "requests": [
-                {
-                    "collectionId": "1c65d329-f96d-34ed-d075-9ed5b6dfb984",
-                    "id": "310efc72-b27a-51df-58ec-d3ee3cba2e3a",
-                    "name": "GET lookup by id",
-                    "description": "GET request to lookup API with id",
-                    "url": "https://itunes.apple.com/lookup?id=909253",
-                    "method": "GET",
-                    "headers": "Content-Type: application/json\nAccept: application/json\n",
-                    "data": "",
-                    "dataMode": "raw",
-                    "timestamp": 0,
-                    "responses": [],
-                    "version": 2
-                },
-                {
-                    "collectionId": "1c65d329-f96d-34ed-d075-9ed5b6dfb984",
-                    "id": "c9a1b5e5-fdde-fb6e-631b-3cc65c58ce88",
-                    "name": "GET search term",
-                    "description": "GET request to search API using multiple parameters",
-                    "url": "https://itunes.apple.com/search?term=yelp&country=us&entity=software",
-                    "method": "GET",
-                    "headers": "",
-                    "data": "",
-                    "dataMode": "params",
-                    "timestamp": 0,
-                    "responses": []
-                }
-            ]
-        }
-    ],
-    "environments": [],
-    "headerPresets": [],
-    "globals": []
+    "id": "79fef1e9-c9ad-38e3-bb06-103a0860ddb7",
+    "name": "iTunes search",
+    "timestamp": 1424675755417,
+    "requests": [
+                 {
+                 "collectionId": "79fef1e9-c9ad-38e3-bb06-103a0860ddb7",
+                 "id": "49589aff-67bf-f8b6-bebe-2e105f5aa158",
+                 "name": "GET search term",
+                 "description": "Search using iTunes API",
+                 "url": "https://itunes.apple.com/search?term=yelp&country=us&entity=software",
+                 "method": "GET",
+                 "headers": "",
+                 "data": "",
+                 "dataMode": "raw",
+                 "timestamp": 0,
+                 "version": 2,
+                 "time": 1424676034884
+                 },
+                 {
+                 "collectionId": "79fef1e9-c9ad-38e3-bb06-103a0860ddb7",
+                 "id": "50ef5db1-be52-4d02-d738-df3f6247e1ed",
+                 "name": "GET lookup by id",
+                 "description": "Find informations using iTunes API",
+                 "url": "https://itunes.apple.com/lookup?id=909253",
+                 "method": "GET",
+                 "headers": "",
+                 "data": "",
+                 "dataMode": "raw",
+                 "timestamp": 0,
+                 "version": 2,
+                 "time": 1424676026634
+                 }
+                 ]
 }
